@@ -9,7 +9,7 @@ const MovieCardViewer = ({ movie }) => {
 
     const calculateVoteAverage = () => {
         if (movie.vote_average === 0) {
-            setAverageScore('No user votes yet!')
+            setAverageScore('N/A')
         } else {
             setAverageScore(movie.vote_average)
         }
@@ -20,12 +20,14 @@ const MovieCardViewer = ({ movie }) => {
 
     return (
         <div className={'movieCard'}>
-            {image === logo ?
-                <div className={'noCardImage'}>
-            <img alt={'Movie Poster'}  src={image} />
-            <h2>No poster found</h2> 
-            <h3>{averageScore}</h3>
+            <div className={'averageScore'}>
+                <h3>{averageScore}</h3>
             </div>
+                {image === logo ?
+                <div className={'noCardImage'}>
+                    <h3>No poster found for {movie.title}</h3> 
+                    <img alt={'Movie Poster'}  src={image} />
+                </div>
             : 
                 <img alt={'Movie Poster'} className={'cardImage'} src={image} />
                 }

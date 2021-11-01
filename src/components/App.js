@@ -10,7 +10,7 @@ const App = () => {
 	return (
 		<div className={'wholePage'}>
 			<div className={'topBar'}>
-				<img src={logo} alt="Timescale" />
+				<img className={'logo'} onClick={() => setMovieTitle('')} src={logo} alt="Timescale" />
 				<input
 					className={'searchBar'}
 					value={movieTitle}

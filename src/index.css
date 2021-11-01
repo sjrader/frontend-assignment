@@ -20,6 +20,10 @@
     top: 0;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .cardHeader {
     margin: 0 0 2% 5%;
 }
@@ -41,11 +45,25 @@
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
 }
 
+.averageScore {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    
+}
+
 .movieCard {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    position: relative;
 }
 
 .movieCard:hover {
@@ -54,6 +72,7 @@
 }
 
 .noCardImage {
+    align-content: space-around;
     width: stretch;
     height: stretch;
     padding: 15px;
@@ -63,18 +82,18 @@
 }
 
 .movieTitle {
+    text-align: center;
     padding: 0 5px 0 5px;
 }
 
 .movieModal {
-    max-height: 50%;
+    max-height: 55%;
     max-width: 50%; 
     justify-content: center;
     background-color: white;
-    width:50%;
-    height: 50%;
     transform: translate(50%,50%);
     overflow: scroll;
+    z-index: 1;
 }
 
 .modalCard {
@@ -89,6 +108,7 @@
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
   align-content: center;
+  z-index: 1;
 }
 
 .modalExitBtn {
@@ -106,4 +126,16 @@
 
 .movieOverview {
     margin: 15px 50px 0 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .allMovieCards {
+    grid-template-columns: 15rem 15rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .allMovieCards {
+    grid-template-columns: 15rem;
+  }
 }
