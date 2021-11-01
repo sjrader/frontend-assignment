@@ -1,0 +1,109 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.wholePage {
+    border-top: solid gray 1px;
+    margin: 1%;
+
+}
+
+.topBar {
+    margin: 1%;
+    margin: 2% 5% 2% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid gray 1px;
+    padding-bottom: 10px;
+    top: 0;
+}
+
+.cardHeader {
+    margin: 0 0 2% 5%;
+}
+
+.searchBar {
+    padding: 5px
+}
+
+.allMovieCards {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem;
+    grid-gap: 1rem;
+    column-gap: 50px;
+    row-gap: 20px;
+}
+
+.movieCardContainer {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.movieCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.movieCard:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.noCardImage {
+    width: stretch;
+    height: stretch;
+    padding: 15px;
+    background-color: #F4F1EA;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.movieTitle {
+    padding: 0 5px 0 5px;
+}
+
+.movieModal {
+    max-height: 50%;
+    max-width: 50%; 
+    justify-content: center;
+    background-color: white;
+    width:50%;
+    height: 50%;
+    transform: translate(50%,50%);
+    overflow: scroll;
+}
+
+.modalCard {
+  position: fixed;
+  display: flex;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  align-content: center;
+}
+
+.modalExitBtn {
+    margin: 5px;
+}
+
+.modalExitBtn:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.cardImageModal {
+    max-height: 35%;
+}
+
+.movieOverview {
+    margin: 15px 50px 0 0;
+}
